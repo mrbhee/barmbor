@@ -1,0 +1,155 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+body{
+  font-family:Arial, Helvetica, sans-serif ;
+  font-size: 16px;
+  line-height: 1.6;
+  color: brown;
+  background-color: antiquewhite;
+  margin: 20;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* h1 h2 h3 h4 h5 h6{
+  font-family:"Roboto", sans-serif ;
+} */
+
+.header{
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.logo{
+  font-size: 1.5rem;
+
+}
+
+/* mobile menu */
+.menu-container{
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: start;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: brown;
+  transform:translateX(-100%);
+  transition: transform 0.2s ease;
+}
+.menu-container.menu-visible{
+  transform: translateX(0);
+}
+
+.menu-container.menu-container.menu-visible .menu{
+  display: flex;
+}
+
+.menu-container.menu-visible .sidebar-logo {
+  display: block;
+}
+
+.menu-container.menu-visible .schedule-call{
+  display: block;
+}
+
+.menu{
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  list-style: nome;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
+.menu a,
+.menu .schedule-call{
+  padding: 15px;
+  color:#fdfdfd;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+}
+
+.menu a:hover{
+  background-color: aqua;
+}
+
+
+.menu-togggle img {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.menu-togggle .cancel {
+  display: flex;
+  width: 20px;
+}
+
+
+.menu-container.menu-visible .menu-toggle .hambuger {
+  display: none;
+}
+
+.menu-container.menu-visible .menu-togle .cancel {
+  display: block;
+}
+.menu-togggle:hover{
+  transform: scale(1.05);
+}
+
+.schedule-call{
+  background-color: #fdfdfd;
+  color: darkslategray;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 8px;
+  display:none;
+  width: 50px;
+  max-width: 30px;
+  margin: 10px;
+  white-space:nowrap;
+}
+
+.schedule-call:hover{
+  background-color:white ;
+  color: blanchedalmond;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 8px;
+
+}
